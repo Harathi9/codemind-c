@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main()
 {
@@ -12,8 +11,12 @@ int main()
         sq=sq/10;
     }
     if(s==n)
-    printf("Neon Number");
+    {
+        printf("Neon Number");
+    }
     else
-    printf("Not Neon Number");
+    {
+        printf("Not Neon Number");
+    }
     return 0;
 }
