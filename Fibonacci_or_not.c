@@ -1,28 +1,27 @@
-
 #include<stdio.h>
 int main()
 {
-    int n,a=0,b=1,c,co=0;
+    int n,i,a[51],count=0;
     scanf("%d",&n);
-    if(n==0||n==1)
+    a[0]=0;
+    a[1]=1;
+    for(i=1;i<51;i++)
     {
-        printf("true");
+        a[i+1]=a[i]+a[i-1];
+    }
+    for(i=0;i<50;i++)
+    {
+        if(a[i]==n)
+        {
+            count++;
+        }
+    }
+    if(count==0)
+    {
+        printf("False");
     }
     else
     {
-        for(int i=2;i<=n;i++)
-        {
-            c=a+b;
-            a=b;
-            b=c;
-            if(n==c)
-        {
-            printf("True");
-            co++;
-        }
-        }
-        if(co==0)
-        printf("False");
+        printf("True");
     }
-    
 }
